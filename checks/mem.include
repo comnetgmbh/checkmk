@@ -68,7 +68,8 @@ def _get_levels_mode_from_value(warn):
     return "%s_%s" % (type_, reference)
 
 
-def normalize_mem_levels(mode, warn, crit, total, _perc_total=None, render_base=1024, render_unit=1):
+def normalize_mem_levels(mode, warn, crit, total, _perc_total=None, render_base=1024,
+                         render_unit=1):
     """get normalized levels and formatter
 
     Levels may be given either as

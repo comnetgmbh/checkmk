@@ -165,7 +165,7 @@ def _load_config_file(path):
     # type: (str) -> None
     """Load the given GUI configuration file"""
     try:
-        exec(open(path).read(), globals(), globals())
+        exec (open(path).read(), globals(), globals())
     except IOError as e:
         if e.errno != errno.ENOENT:  # No such file or directory
             raise
