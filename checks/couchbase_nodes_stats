@@ -63,8 +63,8 @@ def check_couchbase_nodes_mem(_item, params, data):
     # but the WATO rule needs an item
     return check_memory_multiitem(
         params, {
-            'MemTotal': mem_total,
-            'MemFree': mem_free,
+            'mem_total': mem_total,
+            'mem_avail': mem_free,
             'SwapTotal': swap_total,
             'SwapFree': swap_total - swap_used,
         })
