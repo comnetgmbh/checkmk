@@ -33,7 +33,7 @@ def check_couchbase_buckets_vbuckets(_item, params, data):
         yield check_levels(
             resident_items_ratio,
             "resident_items_ratio",
-            (None,None)+params.get("resident_items_ratio",(None,None)),
+            (None, None) + params.get("resident_items_ratio", (None, None)),
             infoname="Resident items ratio",
             human_readable_func=get_percent_human_readable,
         )
@@ -81,6 +81,7 @@ def check_couchbase_buckets_vbuckets_replica(_item, params, data):
             infoname="Item memory",
             human_readable_func=get_bytes_human_readable,
         )
+
 
 check_info['couchbase_buckets_vbuckets'] = {
     'parse_function': parse_couchbase_lines,

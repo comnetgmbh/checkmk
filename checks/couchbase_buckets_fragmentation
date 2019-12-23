@@ -35,7 +35,7 @@ def check_couchbase_buckets_fragmentation(_item, params, data):
             'docs_fragmentation',
             params.get('docs'),
             infoname="Documents fragmentation",
-            human_readable_func=get_percent_human_readable
+            human_readable_func=get_percent_human_readable,
         )
 
     views_fragmentation = data.get('couch_views_fragmentation')
@@ -45,7 +45,7 @@ def check_couchbase_buckets_fragmentation(_item, params, data):
             'views_fragmentation',
             params.get('views'),
             infoname="Views fragmentation",
-            human_readable_func=get_percent_human_readable
+            human_readable_func=get_percent_human_readable,
         )
 
 
