@@ -52,10 +52,10 @@ factory_settings["memory_default_levels"] = {"levels": (150.0, 200.0)}
 @get_parsed_item_data
 def check_couchbase_nodes_mem(_item, params, data):
     try:
-        mem_total = data['mem_total'] / 1024.
-        mem_free = data['mem_free'] / 1024.
-        swap_total = data['swap_total'] / 1024.
-        swap_used = data['swap_used'] / 1024.
+        mem_total = data['mem_total']
+        mem_free = data['mem_free']
+        swap_total = data['swap_total']
+        swap_used = data['swap_used']
     except KeyError:
         return None
 
