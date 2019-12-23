@@ -31,10 +31,8 @@ def check_couchbase_bucket_mem(_item, params, data):
     try:
         return check_memory_multiitem(
             params, {
-                'SwapTotal': 0,
-                'SwapFree': 0,
-                'MemTotal': data['mem_total'] / 1024.,
-                'MemFree': data['mem_free'] / 1024.,
+                'mem_total': data['mem_total'],
+                'mem_avail': data['mem_free'],
             })
     except (KeyError, TypeError):
         return None
